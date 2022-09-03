@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="shortcut icon" href="#">
+    <title>Demo 1: Guess The Number!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <button id="playAgainBtn" class="btn">Again!</button>
+            <h1>Guess The Number!</h1>
+            <p>(Between 1 and 20)</p>
+            <h1 id="myNumber">?</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class='left'>
+            <input type="number" id='guessedNumber'>
+            <button id="checkBtn" class="btn">Check!</button>
+        </section>
+
+        <section class='right'>
+            <p id="msg">Start Guessing...</p>
+            <p id="myScore">Score: <span class="current-score">5</span></p>
+            <p id="highScore">HighScore: <span class="high-score">0</span></p>
+        </section>
+    </main>
+</body>
+
+<script src='js/main.js'></script>
+
+</html>

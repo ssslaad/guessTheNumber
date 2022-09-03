@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
+
+* {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 90%;
+  box-sizing: border-box;
+  margin: 2rem;
+}
+
+body {
+  font-family: "Press Start 2P";
+  color: #eee;
+  background-color: #222;
+  /* background-color: #60b347; */
+}
+
+button {
+  font-family: "Press Start 2P";
+}
+
+header {
+  height: 20rem;
+  border-bottom: 4px solid green;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 45vh;
+}
+
+main {
+  height: 20rem;
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 50vh;
+}
+
+.right {
+  width: 50vh;
+  min-width: 200px;
+}
+
+#guessedNumber {
+  background: #eee;
+  color: #333;
+  font-size: 1rem;
+  padding: 1rem;
+  text-align: center;
+  margin: 3rem;
+}
+
+#myNumber {
+  border: 4px solid #eee;
+  padding: 0.5rem 0px;
+  width: 25rem;
+  text-align: center;
+}
+
+.btn {
+  background-color: #eee;
+  color: #222;
+  font-family: inherit;
+  padding: 2rem 3rem;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #ccc;
+}
+#msg {
+  margin-bottom: 3rem;
+  height: 2rem;
+}
