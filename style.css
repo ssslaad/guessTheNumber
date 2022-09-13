@@ -2,12 +2,18 @@
 
 * {
   box-sizing: inherit;
+  padding: 0;
+  margin: 0;
 }
 
 html {
   font-size: 90%;
   box-sizing: border-box;
-  margin: 2rem;
+}
+
+.myGame {
+  margin: 3em auto;
+  max-width: 700px;
 }
 
 body {
@@ -17,20 +23,24 @@ body {
   /* background-color: #60b347; */
 }
 
+h1 {
+  margin: 1em auto;
+}
+
+p {
+  line-height: 1.5em;
+}
+
 button {
   font-family: "Press Start 2P";
 }
 
 header {
-  height: 20rem;
   border-bottom: 4px solid green;
-  display: flex;
-  justify-content: center;
-  padding-bottom: 45vh;
+  padding-bottom: 1em;
 }
 
 main {
-  height: 20rem;
   color: #eee;
   display: flex;
   align-items: center;
@@ -41,12 +51,17 @@ main {
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 50vh;
 }
 
 .right {
-  width: 50vh;
-  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  padding: 3em 0px;
+  width: 60vh;
+}
+
+.right p {
+  margin: 1em;
 }
 
 #guessedNumber {
@@ -55,27 +70,25 @@ main {
   font-size: 1rem;
   padding: 1rem;
   text-align: center;
-  margin: 3rem;
+  margin-top: 0;
+  margin-bottom: 2em;
 }
 
 #myNumber {
   border: 4px solid #eee;
-  padding: 0.5rem 0px;
-  width: 25rem;
+  padding: 1rem 0px;
+  width: 10em;
   text-align: center;
+  margin: 1em auto;
 }
 
 .btn {
   background-color: #eee;
   color: #222;
-  font-family: inherit;
-  padding: 2rem 3rem;
+  padding: 1rem 2rem;
   cursor: pointer;
 }
+
 .btn:hover {
   background-color: #ccc;
-}
-#msg {
-  margin-bottom: 3rem;
-  height: 2rem;
 }
