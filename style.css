@@ -14,6 +14,7 @@ html {
 .myGame {
   margin: 3em auto;
   max-width: 700px;
+  width: 40em;
 }
 
 body {
@@ -21,14 +22,16 @@ body {
   color: #eee;
   background-color: #222;
   /* background-color: #60b347; */
+  overflow-y: hidden;
 }
 
 h1 {
   margin: 1em auto;
+  text-align: center;
 }
 
-p {
-  line-height: 1.5em;
+header p {
+  text-align: center;
 }
 
 button {
@@ -37,7 +40,7 @@ button {
 
 header {
   border-bottom: 4px solid green;
-  padding-bottom: 1em;
+  padding-bottom: 0.8em;
 }
 
 main {
@@ -51,12 +54,14 @@ main {
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-left: 1em;
 }
 
 .right {
   display: flex;
   flex-direction: column;
   padding: 3em 0px;
+  margin-left: 3em;
   width: 60vh;
 }
 
@@ -67,8 +72,10 @@ main {
 #guessedNumber {
   background: #eee;
   color: #333;
-  font-size: 1rem;
-  padding: 1rem;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 1em;
+  width: 12em;
   text-align: center;
   margin-top: 0;
   margin-bottom: 2em;
