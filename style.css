@@ -14,7 +14,7 @@ html {
 .myGame {
   margin: 3em auto;
   max-width: 700px;
-  width: 40em;
+  width: 50em;
 }
 
 body {
@@ -60,9 +60,10 @@ main {
 .right {
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 3em 0px;
   margin-left: 3em;
-  width: 60vh;
+  width: 65%;
 }
 
 .right p {
