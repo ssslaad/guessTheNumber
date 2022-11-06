@@ -6,16 +6,68 @@
   margin: 0;
 }
 
-html {
-  font-size: 90%;
-  box-sizing: border-box;
+@media (min-width: 1000px) {
+  html {
+    font-size: 84%;
+    box-sizing: border-box;
+  }
+
+  .myGame {
+    margin: 0.2em auto;
+    max-width: 650px;
+    width: 50em;
+    padding: 1em;
+  }
+
+  main {
+    display: flex;
+  }
+
+  .right {
+    align-items: center;
+    width: 90%;
+  }
 }
 
-.myGame {
-  margin: 3em auto;
-  max-width: 700px;
-  width: 50em;
-  padding: 1.5em;
+@media only screen and (device-width: 768px) {
+  html {
+    font-size: 100%;
+    box-sizing: border-box;
+  }
+
+  .myGame {
+    margin: 0em auto;
+    max-width: 650px;
+    width: 50em;
+    padding: 1em;
+  }
+
+  main {
+    display: flex;
+  }
+
+  .right {
+    align-items: center;
+    width: 80%;
+  }
+}
+
+@media only screen and (max-device-width: 480px) {
+  html {
+    font-size: 100%;
+    box-sizing: border-box;
+  }
+
+  .myGame {
+    margin: 0.5em auto;
+    max-width: 350px;
+    width: 50em;
+    padding: 1em;
+  }
+
+  .right {
+    padding-top: 1em;
+  }
 }
 
 body {
@@ -23,12 +75,12 @@ body {
   color: #eee;
   background-color: #222;
   /* background-color: #60b347; */
-  overflow-y: hidden;
 }
 
 h1 {
-  margin: 1em auto;
+  margin: 0.5em auto;
   text-align: center;
+  line-height: 1.8em;
 }
 
 header p {
@@ -40,13 +92,13 @@ button {
 }
 
 header {
-  border-bottom: 4px solid green;
-  padding-bottom: 0.8em;
+  border-bottom: 0.3em solid green;
+  margin-bottom: 1em;
 }
 
 main {
+  margin-top: 2em;
   color: #eee;
-  display: flex;
   align-items: center;
   justify-content: space-around;
 }
@@ -55,20 +107,17 @@ main {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-left: 1em;
+  margin: auto 2em;
 }
 
 .right {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 3em 0px;
-  margin-left: 3em;
-  width: 65%;
 }
 
 .right p {
   margin: 1em;
+  line-height: 2em;
 }
 
 #guessedNumber {
@@ -84,9 +133,9 @@ main {
 }
 
 #myNumber {
-  border: 4px solid #eee;
+  border: 0.2em solid #eee;
   padding: 1rem 0px;
-  width: 10em;
+  width: 9em;
   text-align: center;
   margin: 1em auto;
 }

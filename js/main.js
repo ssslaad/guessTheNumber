@@ -7,8 +7,28 @@ console.log(randomNumber);
 let score = 5;
 document.querySelector(".current-score").textContent = score;
 
-let highScore = 0;
+let highScore;
+
+console.log(`initial highscore: ` + localStorage.getItem("highScore"));
+if (
+  localStorage.getItem("highScore") === undefined ||
+  localStorage.getItem("highScore") == null
+) {
+  localStorage.setItem("highScore", 0);
+}
+
+highScore = localStorage.getItem("highScore");
 document.querySelector(".high-score").textContent = highScore;
+console.log(`After field update: ` + localStorage.getItem("highScore"));
+
+//add event listener for enter key
+document
+  .getElementById("guessedNumber")
+  .addEventListener("keydown", function (key) {
+    if (key.code === "Enter") {
+      checkGuessedNumber();
+    }
+  });
 
 //add event listener on check btn
 document
@@ -25,9 +45,16 @@ function checkGuessedNumber() {
   //No number entered
   if (!guessedNumber) {
     msgToBeUpdated = `⛔ No Number`;
-  } else if (randomNumber === guessedNumber) {
+  }
+  // Right guess
+  else if (randomNumber === guessedNumber) {
     msgToBeUpdated = ` 🤩 Right Answer! Great Work!`;
 
+    if (score > localStorage.getItem("highScore")) {
+      highScore = score;
+    }
+    localStorage.setItem("highScore", highScore);
+    document.querySelector(".high-score").textContent = highScore;
     //show number if user guessed correctly
     let randomNumberField = document.getElementById("myNumber");
     randomNumberField.innerHTML = randomNumber;
@@ -40,8 +67,9 @@ function checkGuessedNumber() {
       );
       reloadPage();
     }, 4000);
-  } else {
-    //Wrong guess
+  }
+  // Incorrect guess
+  else {
     let difference = guessedNumber - randomNumber;
     if (-3 < difference && difference < 3) {
       msgToBeUpdated = `You are quite close!`;
