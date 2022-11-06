@@ -55,10 +55,9 @@ function checkGuessedNumber() {
     }
     localStorage.setItem("highScore", highScore);
     document.querySelector(".high-score").textContent = highScore;
+
     //show number if user guessed correctly
-    let randomNumberField = document.getElementById("myNumber");
-    randomNumberField.innerHTML = randomNumber;
-    document.body.style.transitionDuration = "2s";
+    showNumber();
     document.body.style.backgroundColor = "#60b347";
 
     setTimeout(() => {
@@ -81,10 +80,18 @@ function checkGuessedNumber() {
 
     score--;
     if (!score) {
-      alert(`\n🥲 Game Over!\n\n 🤞 Hard Luck! Try Again!`);
-      reloadPage();
+      showNumber();
+      document.getElementById("checkBtn").disabled = true;
+      msgToBeUpdated = `OOPS! No chances left!`;
+      setTimeout(() => {
+        alert(
+          `\n🥲 Game Over!\n\nNumber was : ${randomNumber}\n\n 🤞 Hard Luck! Try Again!`
+        );
+        reloadPage();
+      }, 2000);
     }
   }
+
   document.querySelector("#msg").textContent = msgToBeUpdated;
   document.querySelector(".current-score").textContent = score;
 }
@@ -95,4 +102,10 @@ document.getElementById("playAgainBtn").addEventListener("click", reloadPage);
 //on click function for again btn
 function reloadPage() {
   location.reload();
+}
+
+function showNumber() {
+  let randomNumberField = document.getElementById("myNumber");
+  randomNumberField.innerHTML = randomNumber;
+  document.body.style.transitionDuration = "2s";
 }
